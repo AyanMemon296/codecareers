@@ -40,6 +40,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   overflow-x: hidden;
   width: 100%;
 }
@@ -51,6 +52,9 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+}
+section[id] {
+  scroll-margin-top: 80px;
 }
 /* Suppress transition flash on page load */
 .no-transition * { transition: none !important; }

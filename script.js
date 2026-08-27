@@ -39,6 +39,26 @@ if (mobileMenuToggle && mobileMenu) {
   });
 }
 
+// ─── SMOOTH SCROLL WITH NAVBAR OFFSET ─────────────────────────────────────────
+function scrollToSection(targetId) {
+  const target = document.querySelector(targetId);
+  if (!target) return;
+  const navHeight = 72;
+  const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+  window.scrollTo({ top: Math.max(0, targetPos), behavior: 'smooth' });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const href = anchor.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      e.preventDefault();
+      scrollToSection(href);
+      history.pushState(null, '', href);
+    }
+  });
+});
+
 // ─── ACTIVE NAV ON SCROLL ─────────────────────────────────────────────────────
 const navLinks = document.querySelectorAll('.nav-link');
 const sectionObserver = new IntersectionObserver((entries) => {
@@ -220,11 +240,8 @@ window.selectTrackAndLevel = function(trackId, levelNum) {
   renderCurriculumTabs();
   renderCurriculum();
 
-  // Smooth scroll to curriculum section
-  const curriculumSec = document.getElementById('curriculum');
-  if (curriculumSec) {
-    curriculumSec.scrollIntoView({ behavior: 'smooth' });
-  }
+  // Smooth scroll to curriculum section with exact navbar offset
+  scrollToSection('#curriculum');
 };
 
 // ─── CURRICULUM TABS ──────────────────────────────────────────────────────────
@@ -470,5 +487,12 @@ fetch('content.json')
     renderCurriculum();
     renderTechEcosystem();
     renderComparisonTable();
+
+    // If page reloaded with a hash (e.g. #compare), scroll to real rendered position
+    if (window.location.hash) {
+      setTimeout(() => {
+        scrollToSection(window.location.hash);
+      }, 50);
+    }
   })
   .catch(err => console.error('Failed to load content.json:', err));
