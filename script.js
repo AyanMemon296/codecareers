@@ -125,18 +125,15 @@ const TECH_ICONS = {
   vscode: 'vscode'
 };
 
-// Dark-colored icons that need inversion in dark mode for maximum contrast
+// Pure black/dark silhouette icons that need inversion in dark mode for maximum contrast
 const DARK_ICONS = new Set([
   'github',
   'next_js',
   'vercel',
-  'replit',
   'prisma',
-  'antigravity',
   'cursor',
   'v0',
   'bolt',
-  'kiro',
   'express',
   'chatgpt',
   'railway',
