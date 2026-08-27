@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Careers — Modern Tech Education</title>
+  <meta name="description"
+    content="Professional coding bootcamps in Full-Stack Web Development, Mobile App Development, and Data Science & Analytics. 3 or 6-month programs." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            emerald: {
+              50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0',
+              300: '#6ee7b7', 400: '#34d399', 500: '#10b981',
+              600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 flex-shrink-0">
+        <span class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </span>
+        <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white">Code<span
+            class="text-emerald-500">Careers</span></span>
+      </a>
+      
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#curriculum" class="nav-link">Curriculum</a>
+        <a href="#tech-stack" class="nav-link">Technologies</a>
+        <a href="#compare" class="nav-link">Compare</a>
+      </div>
+
+      <!-- Right controls -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="w-9 h-9 rounded-lg flex items-center justify-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <svg id="sun-icon" class="w-4 h-4 text-gray-600 dark:text-gray-300 hidden dark:block" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="moon-icon" class="w-4 h-4 text-gray-600 dark:text-gray-300 block dark:hidden" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <a href="#curriculum" class="hidden sm:inline-flex btn-primary text-sm px-4 py-2">View Syllabus</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" aria-label="Open mobile menu" class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-950/95 backdrop-blur-md px-4 py-4 space-y-2">
+      <a href="#courses" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Courses</a>
+      <a href="#curriculum" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Curriculum</a>
+      <a href="#tech-stack" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Technologies</a>
+      <a href="#compare" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Compare</a>
+      <div class="pt-2">
+        <a href="#curriculum" class="mobile-nav-link block text-center btn-primary text-sm px-4 py-2.5 w-full">View Syllabus</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-20 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div>
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Now enrolling — 3 & 6-month programs
+        </div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
+          Build a <span class="text-emerald-500">real career</span><br />in tech
+        </h1>
+        <p class="text-sm sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-6 sm:mb-8 max-w-lg">
+          Intensive, project-based bootcamps in Web Development, Mobile Apps, and Data Science. Graduate job-ready in 3
+          or 6 months.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#courses" class="btn-primary px-6 py-3 text-center">Explore Courses</a>
+          <a href="#compare" class="btn-outline px-6 py-3 text-center">Compare Programs</a>
+        </div>
+        <div class="flex items-center justify-between sm:justify-start gap-4 sm:gap-8 mt-8 sm:mt-12 pt-4 border-t border-gray-100 dark:border-gray-800 sm:border-0 sm:pt-0">
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">3</div>
+            <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Career Tracks</div>
+          </div>
+          <div class="w-px h-8 sm:h-10 bg-gray-200 dark:bg-gray-700"></div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">6</div>
+            <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Months Max</div>
+          </div>
+          <div class="w-px h-8 sm:h-10 bg-gray-200 dark:bg-gray-700"></div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">100%</div>
+            <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Project-Based</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero: macOS architecture diagram (visible and responsive on all screens) -->
+      <div class="mt-4 lg:mt-0">
+        <div class="macos-card">
+          <div class="macos-titlebar">
+            <span class="mac-dot bg-red-400"></span>
+            <span class="mac-dot bg-yellow-400"></span>
+            <span class="mac-dot bg-green-400"></span>
+            <span class="ml-auto text-xs text-gray-400 dark:text-gray-500 font-mono">architecture.flow</span>
+          </div>
+          <div class="p-6 flex flex-col gap-5">
+            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">Full-Stack
+              Architecture</p>
+
+            <!-- 4-node diagram: Client → Server → Database → Deploy -->
+            <div class="arch-diagram">
+              <div class="arch-node">
+                <div class="arch-node-icon arch-node-blue">
+                  <img src="assets/icons/react.svg" alt="React" />
+                </div>
+                <span class="arch-node-label">Client</span>
+                <span class="arch-node-sub">React / HTML</span>
+              </div>
+              <div class="arch-connector">
+                <span class="arch-conn-label">HTTP</span>
+                <svg class="arch-arrow-svg" viewBox="0 0 48 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width="1.5" />
+                  <polyline points="36,2 44,6 36,10" stroke="currentColor" stroke-width="1.5" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-icon arch-node-emerald">
+                  <img src="assets/icons/node_js.svg" alt="Node.js" />
+                </div>
+                <span class="arch-node-label">Server</span>
+                <span class="arch-node-sub">Node.js / API</span>
+              </div>
+              <div class="arch-connector">
+                <span class="arch-conn-label">SQL</span>
+                <svg class="arch-arrow-svg" viewBox="0 0 48 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width="1.5" />
+                  <polyline points="36,2 44,6 36,10" stroke="currentColor" stroke-width="1.5" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-icon arch-node-purple">
+                  <img src="assets/icons/postgresql.svg" alt="PostgreSQL" />
+                </div>
+                <span class="arch-node-label">Database</span>
+                <span class="arch-node-sub">PostgreSQL</span>
+              </div>
+              <div class="arch-connector">
+                <span class="arch-conn-label">CI/CD</span>
+                <svg class="arch-arrow-svg" viewBox="0 0 48 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width="1.5" />
+                  <polyline points="36,2 44,6 36,10" stroke="currentColor" stroke-width="1.5" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="arch-node">
+                <div class="arch-node-icon arch-node-amber">
+                  <img src="assets/icons/vercel.svg" alt="Vercel" />
+                </div>
+                <span class="arch-node-label">Deploy</span>
+                <span class="arch-node-sub">Cloud / Vercel</span>
+              </div>
+            </div>
+
+            <!-- Month progression -->
+            <div class="arch-phases">
+              <div class="arch-phase">
+                <div class="arch-phase-label">Month 1&ndash;2</div>
+                <div class="arch-phase-tags">
+                  <span class="tag-badge">HTML/CSS</span>
+                  <span class="tag-badge">JS</span>
+                  <span class="tag-badge">React</span>
+                </div>
+              </div>
+              <div class="arch-phase">
+                <div class="arch-phase-label">Month 3&ndash;4</div>
+                <div class="arch-phase-tags">
+                  <span class="tag-badge">Node.js</span>
+                  <span class="tag-badge">SQL</span>
+                  <span class="tag-badge">Auth</span>
+                </div>
+              </div>
+              <div class="arch-phase">
+                <div class="arch-phase-label">Month 5&ndash;6</div>
+                <div class="arch-phase-tags">
+                  <span class="tag-badge">Docker</span>
+                  <span class="tag-badge">CI/CD</span>
+                  <span class="tag-badge">AI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status bar -->
+            <div class="arch-status">
+              <span class="arch-pulse"></span>
+              <span class="text-xs text-gray-500 dark:text-gray-400">Build &rarr; Test &rarr; Deploy &rarr;
+                <span class="text-emerald-500 font-semibold">Ship to production</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE TRACKS -->
+  <section id="courses" class="py-14 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-14">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">Choose Your Track</h2>
+        <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-xl mx-auto">Three career paths, each available at
+          3-month and 6-month depth.</p>
+      </div>
+      <div id="course-cards" class="grid lg:grid-cols-3 gap-6 lg:gap-8"></div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section id="curriculum" class="py-14 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8 sm:mb-10">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">Curriculum</h2>
+        <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-md mx-auto">Month-by-month topics and projects for
+          each program.</p>
+      </div>
+
+      <!-- Track Selector -->
+      <div id="curriculum-tabs" class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-10"></div>
+
+      <!-- Level Switcher -->
+      <div class="flex justify-center mb-8 sm:mb-10">
+        <div class="inline-flex rounded-xl bg-gray-200 dark:bg-gray-800 p-1 gap-1">
+          <button id="level-btn-1" onclick="setLevel(1)"
+            class="level-btn active px-4 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all">3 Months</button>
+          <button id="level-btn-2" onclick="setLevel(2)"
+            class="level-btn px-4 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all">6 Months</button>
+        </div>
+      </div>
+
+      <!-- Curriculum Content -->
+      <div id="curriculum-content"></div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES & TOOLS ECOSYSTEM -->
+  <section id="tech-stack" class="py-14 sm:py-20 lg:py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8 sm:mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          Complete Toolkit (48 Industry Technologies)
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">Technologies You'll Master</h2>
+        <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-xl mx-auto">From frontend frameworks and backend runtimes to modern AI-assisted engineering tools, cloud hosting, and production databases.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div id="tech-category-filters" class="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-10"></div>
+
+      <!-- Tools Grid -->
+      <div id="tech-tools-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-3.5"></div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section id="compare" class="py-14 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">Compare All Programs</h2>
+        <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-md mx-auto">All 3 tracks across both levels, side by side.</p>
+        <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-2 block sm:hidden font-medium">Scroll horizontally to view all courses &rarr;</p>
+      </div>
+      <div id="comparison-table"
+        class="overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm bg-white dark:bg-gray-900"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-8 sm:py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-emerald-500 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </span>
+        <span class="font-bold text-gray-900 dark:text-white">Code<span class="text-emerald-500">Careers</span></span>
+      </div>
+      <p class="text-sm text-gray-400 dark:text-gray-500">3-month and 6-month programs in Web, Mobile & Data Science.
+      </p>
+      <a href="#hero" class="text-sm text-emerald-500 hover:text-emerald-600 font-medium transition-colors">Back to top
+        ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

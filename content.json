@@ -1,0 +1,370 @@
+{
+  "toolsEcosystem": [
+    {
+      "category": "Frontend & UI",
+      "tools": [
+        { "id": "html5", "name": "HTML5" },
+        { "id": "css", "name": "CSS3" },
+        { "id": "javascript", "name": "JavaScript" },
+        { "id": "typescript", "name": "TypeScript" },
+        { "id": "react", "name": "React" },
+        { "id": "next_js", "name": "Next.js" },
+        { "id": "vite", "name": "Vite" },
+        { "id": "tailwind_css", "name": "Tailwind CSS" }
+      ]
+    },
+    {
+      "category": "Backend & APIs",
+      "tools": [
+        { "id": "node_js", "name": "Node.js" },
+        { "id": "express", "name": "Express" },
+        { "id": "nest_js", "name": "NestJS" },
+        { "id": "python", "name": "Python" },
+        { "id": "fastapi", "name": "FastAPI" },
+        { "id": "pydantic", "name": "Pydantic" },
+        { "id": "swagger", "name": "Swagger / OpenAPI" }
+      ]
+    },
+    {
+      "category": "Database & Storage",
+      "tools": [
+        { "id": "postgresql", "name": "PostgreSQL" },
+        { "id": "sqlite", "name": "SQLite" },
+        { "id": "redis", "name": "Redis" },
+        { "id": "prisma", "name": "Prisma ORM" },
+        { "id": "sqlalchemy", "name": "SQLAlchemy" },
+        { "id": "sqlmodel", "name": "SQLModel" },
+        { "id": "supabase", "name": "Supabase" },
+        { "id": "firebase", "name": "Firebase" }
+      ]
+    },
+    {
+      "category": "Mobile Development",
+      "tools": [
+        { "id": "flutter", "name": "Flutter" },
+        { "id": "dart", "name": "Dart" },
+        { "id": "android_studio", "name": "Android Studio" },
+        { "id": "google_play_console", "name": "Google Play" }
+      ]
+    },
+    {
+      "category": "AI & Developer Tools",
+      "tools": [
+        { "id": "claude", "name": "Claude" },
+        { "id": "chatgpt", "name": "ChatGPT" },
+        { "id": "gemini", "name": "Gemini" },
+        { "id": "google_ai_studio", "name": "Google AI Studio" },
+        { "id": "cursor", "name": "Cursor AI" },
+        { "id": "antigravity", "name": "Google Antigravity" },
+        { "id": "v0", "name": "v0 by Vercel" },
+        { "id": "bolt", "name": "Bolt.new" },
+        { "id": "lovable", "name": "Lovable" },
+        { "id": "replit", "name": "Replit" },
+        { "id": "kiro", "name": "Kiro" }
+      ]
+    },
+    {
+      "category": "Cloud & Deployment",
+      "tools": [
+        { "id": "git", "name": "Git" },
+        { "id": "github", "name": "GitHub" },
+        { "id": "github_actions", "name": "GitHub Actions" },
+        { "id": "docker", "name": "Docker" },
+        { "id": "vercel", "name": "Vercel" },
+        { "id": "netlify", "name": "Netlify" },
+        { "id": "railway", "name": "Railway" },
+        { "id": "render", "name": "Render" },
+        { "id": "cloudflare", "name": "Cloudflare" },
+        { "id": "vscode", "name": "VS Code" }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "web",
+      "title": "Full-Stack Web Development",
+      "icon": "web",
+      "color": "#10B981",
+      "levels": [
+        {
+          "level": 1,
+          "duration": "3 Months",
+          "title": "Frontend Web Development",
+          "outcome": "Frontend Web Developer",
+          "outcomeDesc": "Build, test and deploy modern responsive web applications.",
+          "stack": ["html5", "css", "javascript", "typescript", "react", "vite", "tailwind_css", "git", "github", "cursor", "v0", "vercel", "netlify"],
+          "months": [
+            {
+              "month": 1,
+              "title": "Web Foundations & JavaScript",
+              "modules": [
+                { "name": "Web Fundamentals", "topics": ["Internet and Web", "Client–server architecture", "Browser fundamentals", "HTTP/HTTPS", "Request/response lifecycle", "HTTP methods and status codes", "Browser DevTools"] },
+                { "name": "HTML", "topics": ["Document structure", "Semantic HTML", "Forms and validation", "Tables and lists", "Images and media", "Accessibility fundamentals", "SEO fundamentals"] },
+                { "name": "CSS", "topics": ["Selectors and cascade", "Box model", "Flexbox", "CSS Grid", "Responsive design", "Media queries", "CSS variables", "Transitions and animations"] },
+                { "name": "JavaScript", "topics": ["Variables and data types", "Functions and scope", "Arrays and objects", "DOM manipulation", "Events and event delegation", "Promises", "async/await", "Fetch API"] }
+              ],
+              "project": "Responsive multi-page business/product website with JavaScript interactions, form validation and deployment"
+            },
+            {
+              "month": 2,
+              "title": "TypeScript & React",
+              "modules": [
+                { "name": "TypeScript", "topics": ["Type inference", "Primitive and complex types", "Interfaces", "Type aliases", "Union types", "Generics fundamentals", "Utility types", "Strict mode"] },
+                { "name": "React", "topics": ["React fundamentals", "JSX", "Components", "Props", "State", "Events", "Conditional rendering", "Custom hooks", "Effects"] },
+                { "name": "Frontend App Dev", "topics": ["Component architecture", "Routing", "Form handling", "API integration", "Loading, empty and error states", "State management"] }
+              ],
+              "project": "Interactive analytics/management dashboard with multiple pages, forms, search, filtering and charts"
+            },
+            {
+              "month": 3,
+              "title": "Frontend Applications & Deployment",
+              "modules": [
+                { "name": "APIs & Data", "topics": ["REST API fundamentals", "Authentication concepts", "Pagination", "Search and filtering", "API data handling"] },
+                { "name": "Application Architecture", "topics": ["Project structure", "Components", "Pages", "Features", "Services", "Utilities", "Separation of concerns"] },
+                { "name": "Git & GitHub", "topics": ["Branches", "Commits", "Merging", "Pull requests", "Conflict resolution", "Code review"] },
+                { "name": "Testing & Debugging", "topics": ["Debugging methodology", "Browser DevTools", "Unit testing fundamentals", "Component testing fundamentals"] },
+                { "name": "AI-Assisted Development", "topics": ["AI-assisted coding", "Debugging with AI", "Refactoring", "Test generation", "Code review"] }
+              ],
+              "project": "Production-style frontend application + Original independent frontend app with live deployment"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "duration": "6 Months",
+          "title": "Full-Stack Web Development",
+          "outcome": "Full-Stack Web Developer",
+          "outcomeDesc": "Design, develop, test and deploy complete modern web applications.",
+          "stack": ["next_js", "node_js", "express", "nest_js", "postgresql", "prisma", "redis", "supabase", "docker", "github_actions", "claude", "gemini", "cloudflare", "render", "railway", "vercel"],
+          "months": [
+            {
+              "month": 4,
+              "title": "Backend & Database Development",
+              "modules": [
+                { "name": "Backend Fundamentals", "topics": ["Server-side development", "Node.js", "Express & NestJS APIs", "Routing", "Middleware", "Validation", "Error handling", "Logging"] },
+                { "name": "Database", "topics": ["PostgreSQL", "Tables and relationships", "SQL CRUD", "Filtering and sorting", "Joins", "Aggregations", "Prisma ORM", "Transactions"] },
+                { "name": "Authentication & Authorization", "topics": ["Authentication", "Authorization", "Password security", "Token/session concepts", "Role-based access control"] }
+              ],
+              "project": "Production-style REST API with PostgreSQL, authentication and authorization"
+            },
+            {
+              "month": 5,
+              "title": "Full-Stack Application Development",
+              "modules": [
+                { "name": "Frontend–Backend Integration", "topics": ["API integration", "Authentication flow", "Protected flows", "Data synchronization", "File uploads", "Pagination"] },
+                { "name": "Full-Stack Architecture", "topics": ["Frontend/backend separation", "API layer", "Service layer", "Database layer", "Security fundamentals"] },
+                { "name": "Advanced Web Dev", "topics": ["Server-side rendering concepts", "Real-time communication concepts", "Redis caching", "Payment integration concepts"] }
+              ],
+              "project": "Full-stack business application — SaaS platform, Marketplace, Booking platform, or Business management system"
+            },
+            {
+              "month": 6,
+              "title": "Production Engineering, AI & Capstone",
+              "modules": [
+                { "name": "Production Engineering", "topics": ["Production configuration", "Logging", "Error handling", "Security practices", "Performance fundamentals", "Caching", "Background processing"] },
+                { "name": "Testing", "topics": ["Unit testing", "Integration testing", "API testing", "End-to-end testing"] },
+                { "name": "Docker & CI/CD", "topics": ["Docker fundamentals", "Containers", "CI/CD concepts", "Automated testing", "Deployment pipelines"] },
+                { "name": "AI Engineering", "topics": ["Claude & Gemini integration", "Prompt engineering", "Structured outputs", "Streaming", "AI chat interfaces", "Embeddings", "RAG fundamentals"] }
+              ],
+              "project": "Original full-stack capstone — Frontend, Backend, Database, Auth, Testing, AI feature, CI/CD, Cloud deployment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "title": "Mobile App Development",
+      "icon": "mobile",
+      "color": "#059669",
+      "levels": [
+        {
+          "level": 1,
+          "duration": "3 Months",
+          "title": "Flutter Mobile Development",
+          "outcome": "Flutter Mobile Developer",
+          "outcomeDesc": "Build, test and deploy modern cross-platform mobile applications.",
+          "stack": ["dart", "flutter", "firebase", "sqlite", "android_studio", "vscode", "cursor", "bolt", "git", "github"],
+          "months": [
+            {
+              "month": 1,
+              "title": "Dart & Flutter Fundamentals",
+              "modules": [
+                { "name": "Dart", "topics": ["Dart fundamentals", "Null safety", "OOP fundamentals", "Inheritance and abstraction", "Async programming", "Futures and Streams"] },
+                { "name": "Flutter", "topics": ["Widget-based architecture", "Stateless and Stateful widgets", "Layout system", "Lists and grids", "Navigation and routing", "Material Design", "Themes and dark mode", "Basic animations"] }
+              ],
+              "project": "Multi-screen e-commerce/product application with responsive UI, navigation, forms, themes and animations"
+            },
+            {
+              "month": 2,
+              "title": "Application Development & Device Features",
+              "modules": [
+                { "name": "State Management", "topics": ["Local state", "Application state", "State management patterns", "Loading, success, empty and error states"] },
+                { "name": "Application Architecture", "topics": ["Feature-based project structure", "Repository pattern", "Dependency injection", "Models and serialization"] },
+                { "name": "Device & Native Features", "topics": ["Runtime permissions", "Camera", "Image picker", "Location/GPS", "Maps", "Biometrics"] }
+              ],
+              "project": "Location-aware utility app with state management, camera/file access, GPS/maps and biometric authentication"
+            },
+            {
+              "month": 3,
+              "title": "Local Data, Offline Apps & Deployment",
+              "modules": [
+                { "name": "Local Storage", "topics": ["Key-value storage", "Secure storage", "Local relational database", "CRUD operations", "Offline-first fundamentals"] },
+                { "name": "Backend Services", "topics": ["BaaS fundamentals", "Authentication", "Database integration", "File storage"] },
+                { "name": "Deployment", "topics": ["Debug vs release builds", "Android application builds", "App signing fundamentals", "Google Play deployment fundamentals"] },
+                { "name": "AI-Assisted Development", "topics": ["AI-assisted coding", "Debugging with AI", "Test generation", "Documentation"] }
+              ],
+              "project": "Offline-first expense/task management app + Original independent mobile app with production build"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "duration": "6 Months",
+          "title": "Full-Stack Mobile Development",
+          "outcome": "Full-Stack Mobile Developer",
+          "outcomeDesc": "Build, integrate, test and release complete production-oriented mobile applications.",
+          "stack": ["flutter", "dart", "postgresql", "fastapi", "supabase", "docker", "github_actions", "firebase", "google_ai_studio", "google_play_console"],
+          "months": [
+            {
+              "month": 4,
+              "title": "Backend, PostgreSQL & Mobile Networking",
+              "modules": [
+                { "name": "Backend Development", "topics": ["Server-side development", "REST API architecture", "Validation", "Error handling", "Authentication", "Authorization", "API documentation"] },
+                { "name": "PostgreSQL", "topics": ["Schema design", "SQL CRUD", "Joins", "Aggregations", "Indexes", "Transactions", "Migrations", "ORM"] },
+                { "name": "Mobile Networking", "topics": ["Production API integration", "Authentication tokens", "Token refresh", "Interceptors", "Network error handling", "Pagination"] }
+              ],
+              "project": "Full-stack mobile application with custom backend, PostgreSQL and authentication"
+            },
+            {
+              "month": 5,
+              "title": "Production Mobile Features",
+              "modules": [
+                { "name": "Advanced Backend Integration", "topics": ["File uploads", "Cloud/object storage", "Advanced authentication", "Role-based access", "Secure API communication"] },
+                { "name": "Real-Time & Notifications", "topics": ["Real-time communication", "Push notifications", "Deep linking", "Background/foreground behavior"] },
+                { "name": "Payments", "topics": ["Mobile payment integration", "Checkout flow", "Server-side verification", "Webhooks"] },
+                { "name": "Offline & Synchronization", "topics": ["Offline data", "Sync queues", "Conflict handling", "Optimistic updates"] }
+              ],
+              "project": "Real-time booking/service mobile app with notifications, payments and offline support"
+            },
+            {
+              "month": 6,
+              "title": "Performance, AI, CI/CD & Production Release",
+              "modules": [
+                { "name": "Performance", "topics": ["Flutter DevTools", "CPU and memory profiling", "Widget rebuild optimization", "Image and asset optimization", "Startup performance"] },
+                { "name": "AI Engineering", "topics": ["AI API integration", "Prompt engineering", "Streaming", "AI chat interfaces", "AI-powered mobile features"] },
+                { "name": "Testing", "topics": ["Unit testing", "Widget testing", "Integration testing", "Mocking", "Regression testing"] },
+                { "name": "Production Release", "topics": ["Android release configuration", "Application signing", "Production build", "Google Play deployment", "Release management"] }
+              ],
+              "project": "Original full-stack mobile capstone — Flutter frontend, Backend, PostgreSQL, Auth, Offline support, AI feature, CI/CD, Production release"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data Science & Analytics",
+      "icon": "data",
+      "color": "#047857",
+      "levels": [
+        {
+          "level": 1,
+          "duration": "3 Months",
+          "title": "Data Analytics & Data Science Foundations",
+          "outcome": "Data Analyst / Data Science Foundation",
+          "outcomeDesc": "Collect, clean, query, analyze and visualize data and communicate meaningful business insights.",
+          "stack": ["python", "sqlite", "git", "github", "vscode", "chatgpt", "gemini"],
+          "months": [
+            {
+              "month": 1,
+              "title": "Python, SQL & Data Fundamentals",
+              "modules": [
+                { "name": "Python", "topics": ["Python fundamentals", "Variables and data types", "Functions", "Lists, tuples, sets and dictionaries", "Exception handling", "File handling", "JSON and CSV"] },
+                { "name": "SQL", "topics": ["Relational databases", "SQL syntax", "SELECT, INSERT, UPDATE, DELETE", "Filtering and sorting", "Aggregations", "Joins", "Window functions", "Data cleaning with SQL"] },
+                { "name": "Data Fundamentals", "topics": ["Structured vs unstructured data", "Data quality", "Missing data", "Duplicates", "Outliers", "Data validation"] }
+              ],
+              "project": "SQL + Python business data analysis project"
+            },
+            {
+              "month": 2,
+              "title": "Data Analysis, Statistics & Visualization",
+              "modules": [
+                { "name": "NumPy & Pandas", "topics": ["Arrays", "Vectorized operations", "Series and DataFrames", "Data selection", "Filtering", "Grouping", "Aggregation", "Merging and joining", "Missing data handling"] },
+                { "name": "Exploratory Data Analysis", "topics": ["Data distributions", "Relationships between variables", "Correlation", "Outlier analysis", "Pattern identification", "Business questions and metrics"] },
+                { "name": "Statistics", "topics": ["Mean, median and mode", "Variance and standard deviation", "Probability fundamentals", "Distributions", "Confidence intervals", "Hypothesis testing fundamentals"] },
+                { "name": "Data Visualization", "topics": ["Choosing appropriate charts", "Matplotlib", "Interactive visualization", "Dashboards", "Data storytelling", "Presenting insights"] }
+              ],
+              "project": "Complete exploratory data analysis and visualization project"
+            },
+            {
+              "month": 3,
+              "title": "Business Analytics, BI & Data Projects",
+              "modules": [
+                { "name": "Business Analytics", "topics": ["Business questions", "KPIs and metrics", "Trend analysis", "Segmentation", "Cohort analysis", "Funnel analysis", "Root-cause analysis"] },
+                { "name": "Business Intelligence", "topics": ["BI fundamentals", "Data modeling", "Dimensions and measures", "Star schema", "Dashboard design", "Interactive reports"] },
+                { "name": "AI-Assisted Data Work", "topics": ["AI-assisted analysis", "SQL assistance", "Data-cleaning assistance", "Visualization assistance", "Insight generation"] }
+              ],
+              "project": "End-to-end business analytics project: Raw data → Cleaning → SQL analysis → Python analysis → Visualization → Dashboard → Business insights"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "duration": "6 Months",
+          "title": "Data Science & Machine Learning",
+          "outcome": "Data Scientist / Machine Learning Practitioner",
+          "outcomeDesc": "Take a real-world data problem from raw data through analysis, machine learning, evaluation and basic production deployment.",
+          "stack": ["python", "postgresql", "fastapi", "pydantic", "sqlalchemy", "sqlmodel", "swagger", "docker", "github_actions", "google_ai_studio", "claude", "render"],
+          "months": [
+            {
+              "month": 4,
+              "title": "Machine Learning Foundations",
+              "modules": [
+                { "name": "Machine Learning Fundamentals", "topics": ["Types of machine learning", "Machine learning workflow", "Features and targets", "Training, validation and testing", "Data leakage", "Bias and variance"] },
+                { "name": "Data Preparation", "topics": ["Feature engineering", "Encoding categorical data", "Feature scaling", "Missing-value strategies", "Feature selection"] },
+                { "name": "Supervised Learning", "topics": ["Linear regression", "Logistic regression", "Decision trees", "Ensemble methods", "K-nearest neighbors", "Support vector machines"] },
+                { "name": "Model Evaluation", "topics": ["Regression metrics", "Classification metrics", "Confusion matrix", "Cross-validation", "Baseline models", "Model comparison"] }
+              ],
+              "project": "End-to-end supervised machine learning project"
+            },
+            {
+              "month": 5,
+              "title": "Advanced Machine Learning & Applied Data Science",
+              "modules": [
+                { "name": "Advanced Modeling", "topics": ["Random forests", "Gradient boosting", "Model selection", "Hyperparameter tuning"] },
+                { "name": "Unsupervised Learning", "topics": ["Clustering", "Dimensionality reduction", "PCA", "Customer/user segmentation"] },
+                { "name": "Time Series", "topics": ["Time-series fundamentals", "Trends and seasonality", "Forecasting", "Forecast evaluation"] },
+                { "name": "Advanced DS Workflow", "topics": ["Machine learning pipelines", "Experiment tracking fundamentals", "Model versioning fundamentals"] }
+              ],
+              "project": "Applied machine learning project based on a real-world problem"
+            },
+            {
+              "month": 6,
+              "title": "Production Data Science, AI & Capstone",
+              "modules": [
+                { "name": "ML Deployment", "topics": ["Model serialization", "Model serving", "FastAPI & Swagger prediction APIs", "Batch vs real-time inference", "Production considerations"] },
+                { "name": "MLOps Fundamentals", "topics": ["Reproducible environments", "Model versioning", "Experiment tracking", "Data/model validation", "Model drift concepts"] },
+                { "name": "AI & LLM Applications", "topics": ["AI API integration", "Prompt engineering", "Embeddings", "Semantic search", "RAG fundamentals", "Tool/function calling"] },
+                { "name": "Deployment", "topics": ["Application deployment", "Docker fundamentals", "API deployment", "Basic CI/CD"] }
+              ],
+              "project": "End-to-end DS/ML capstone: Problem definition → Data → EDA → Feature engineering → Model development → Evaluation → Deployment → Documentation"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "rows": [
+      { "label": "Core Focus", "web3": "Frontend Web", "web6": "Full-Stack Web", "mob3": "Flutter Mobile", "mob6": "Full-Stack Mobile", "data3": "Data Analytics", "data6": "Data Science & ML" },
+      { "label": "Primary Languages", "web3": "HTML, CSS, JS, TS", "web6": "+ Node.js, SQL", "mob3": "Dart, Flutter", "mob6": "+ SQL, Backend", "data3": "Python, SQL", "data6": "+ Advanced Python" },
+      { "label": "Backend", "web3": "—", "web6": "Node.js, Express, NestJS", "mob3": "BaaS (Firebase)", "mob6": "Custom Backend / FastAPI", "data3": "—", "data6": "FastAPI / Python APIs" },
+      { "label": "Database", "web3": "—", "web6": "PostgreSQL, Prisma, Redis", "mob3": "SQLite, Firebase", "mob6": "PostgreSQL, Supabase", "data3": "SQLite basics", "data6": "PostgreSQL, SQLAlchemy" },
+      { "label": "AI Integration", "web3": "Cursor, v0, ChatGPT", "web6": "Claude, Gemini, RAG, AI APIs", "mob3": "Bolt, Cursor assistance", "mob6": "Google AI Studio, AI Features", "data3": "ChatGPT, Gemini analysis", "data6": "LLMs, RAG, Embeddings" },
+      { "label": "DevOps / CI/CD", "web3": "Git, GitHub, Vercel, Netlify", "web6": "Docker, GitHub Actions, Cloud", "mob3": "Git, GitHub, Play Console", "mob6": "Docker, CI/CD, Release", "data3": "Git, GitHub, VS Code", "data6": "Docker, CI/CD, Render" },
+      { "label": "Capstone Project", "web3": "Live frontend app", "web6": "Full-stack production app", "mob3": "Published mobile app", "mob6": "Full-stack mobile app", "data3": "Analytics dashboard", "data6": "Deployed ML model API" },
+      { "label": "Graduate Outcome", "web3": "Frontend Developer", "web6": "Full-Stack Developer", "mob3": "Flutter Developer", "mob6": "Full-Stack Mobile Dev", "data3": "Data Analyst", "data6": "Data Scientist / ML" }
+    ]
+  }
+}
