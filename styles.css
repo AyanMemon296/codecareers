@@ -914,9 +914,13 @@ body {
 }
 
 /* ============================================================
-   SCROLLBAR
+   SCROLLBAR & HELPERS
    ============================================================ */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(16,185,129,0.3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(16,185,129,0.5); }
+
+.dark .dark-invert {
+  filter: invert(1) brightness(1.2);
+}

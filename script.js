@@ -125,6 +125,28 @@ const TECH_ICONS = {
   vscode: 'vscode'
 };
 
+// Dark-colored icons that need inversion in dark mode for maximum contrast
+const DARK_ICONS = new Set([
+  'github',
+  'next_js',
+  'vercel',
+  'replit',
+  'prisma',
+  'antigravity',
+  'cursor',
+  'v0',
+  'bolt',
+  'kiro',
+  'express',
+  'chatgpt',
+  'railway',
+  'render'
+]);
+
+function getIconClass(key) {
+  return DARK_ICONS.has(key) ? 'dark-invert' : '';
+}
+
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
 function el(tag, cls, html = '') {
   const e = document.createElement(tag);
@@ -138,8 +160,9 @@ function techStackHTML(stack) {
   return stack.map(key => {
     const file = TECH_ICONS[key] || key;
     const label = key.replace(/_/g, ' ');
+    const darkInvert = getIconClass(key);
     return `<div class="tech-icon" title="${label}">
-      <img src="assets/icons/${file}.svg" alt="${label}" loading="lazy" width="20" height="20"
+      <img src="assets/icons/${file}.svg" alt="${label}" class="${darkInvert}" loading="lazy" width="20" height="20"
            onerror="this.parentElement.style.display='none'"/>
     </div>`;
   }).join('');
@@ -308,8 +331,9 @@ function renderCurriculum() {
             ${techKeys.map(key => {
               const file = TECH_ICONS[key] || key;
               const label = key.replace(/_/g, ' ');
+              const darkInvert = getIconClass(key);
               return `<div class="roadmap-tech-icon" title="${label}">
-                <img src="assets/icons/${file}.svg" alt="${label}" loading="lazy" width="16" height="16" onerror="this.parentElement.style.display='none'"/>
+                <img src="assets/icons/${file}.svg" alt="${label}" class="${darkInvert}" loading="lazy" width="16" height="16" onerror="this.parentElement.style.display='none'"/>
               </div>`;
             }).join('')}
           </div>
@@ -385,10 +409,11 @@ function renderTechEcosystem() {
 
   gridContainer.innerHTML = '';
   visibleTools.forEach(tool => {
+    const darkInvert = getIconClass(tool.id);
     const card = el('div', 'tool-item-card');
     card.innerHTML = `
       <div class="tool-icon-wrap">
-        <img src="assets/icons/${tool.id}.svg" alt="${tool.name}" loading="lazy" width="24" height="24"
+        <img src="assets/icons/${tool.id}.svg" alt="${tool.name}" class="${darkInvert}" loading="lazy" width="24" height="24"
              onerror="this.parentElement.innerHTML='&bull;'"/>
       </div>
       <div class="tool-name">${tool.name}</div>
